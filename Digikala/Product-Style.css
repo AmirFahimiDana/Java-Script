@@ -345,13 +345,12 @@ a:visited{
       display: flex;
       flex-flow: row nowrap;
       width: inherit;
+      margin-top: 25px;
   }
 
   .main-content__products-sidebar{
-    border: red  solid 2px;
     height: 5270px;
     width: 18%;
-    background-color: var(--content-background-color);
   }
 
   .main-content__product-goods{
@@ -365,6 +364,9 @@ a:visited{
   .products-sidebar__boxes{
       width: 100%;
       height: auto;
+      background-color: var(--content-background-color);
+      margin-bottom: 10px;
+      border-radius: 5px;
   }
 
   .products-sidebar__boxes-title{
@@ -377,3 +379,44 @@ a:visited{
       color: rgb(83,83,83);
       border-bottom: solid rgb(242,242,242) 1px;
   }
+
+  .products-sidebar__boxes-content{
+      
+      font-size:14px ;
+      font-weight: 400;
+      color: rgb(84,84,84);
+      font-family: var(--font);
+      
+  }
+
+ .boxes-content__detail{
+     margin: 0px 0px;
+ }
+
+  .products-sidebar__boxes-content ul{
+    list-style: none;
+    padding: 7px 17px 1px 0px;
+}
+
+.fa-fa-angle-down ::before{
+    color: rgb(107,107,107);
+}
+
+.boxes-content__icon{
+    padding-left: 5px;
+}
+
+.products-sidebar__boxes-content li{
+    margin-bottom: 7px;
+}
+
+.boxes-content__active{
+    font-family: var(--font);
+    font-size: 16px;
+    font-weight: 700;
+    color: rgb(83,83,83);
+}
+
+.products-sidebar__boxes-content span:hover:not(.boxes-content__active){
+    color: rgb(114,220,231);
+}
