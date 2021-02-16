@@ -1,0 +1,207 @@
+body {
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: #16202a;
+    color: white;
+    font-family: "chau philomene One", sans-serif;
+    box-sizing: border-box;
+}
+
+nav>ul {
+    flex-flow: column nowrap;
+    display: flex;
+    margin: 0px 20px 20px 30px;
+}
+
+nav>ul>li {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    font-size: 19px;
+    padding: 10px;
+    align-items: center;
+    border-radius: 25px;
+}
+
+i {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    margin: 0px 10px 0px 0px;
+}
+
+nav>ul> :last-child {
+    background-color: #1da1f3;
+    border-radius: 25px;
+    width: 200px;
+    height: 50px;
+    justify-content: center;
+    padding: 0px;
+}
+
+nav>ul>:hover {
+    background-color: #152c3e;
+    color: #1da1f3;
+}
+
+nav>ul> :last-child:hover {
+    color: white;
+}
+
+nav>ul>:nth-child(2) {
+    color: #1da1f3;
+}
+
+main {
+    flex-flow: column nowrap;
+    display: flex;
+    margin: 10px 20px 20px 20px;
+    margin-right: 10px;
+    width: 80%;
+}
+
+main>div> :last-child>i {
+    border-radius: 25px;
+    width: 15px;
+    height: 15px;
+    padding: 0px;
+}
+
+main>div> :last-child>:hover {
+    background-color: #152c3e;
+    color: #1da1f3;
+}
+
+main>div {
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 0px 20px 20px 20px;
+    justify-content: space-between;
+    font: bold;
+}
+
+section {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    border: 1px rgb(40, 61, 82) solid;
+    border-bottom: 0px;
+    padding: 5px 15px 5px 15px;
+}
+
+section>img {
+    border-radius: 50%;
+    padding: 0px;
+}
+
+section>div {
+    display: flex;
+    flex-flow: column nowrap;
+    flex-grow: 1;
+    display: inline-block;
+    margin: 0px;
+}
+
+section>:first-child {
+    padding: 0px;
+    margin: 10px 10px 0px 0px;
+    ;
+}
+
+section>div>div {
+    display: flex;
+    flex-flow: row nowrap;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+p {
+    letter-spacing: 1px;
+    display: inline-block;
+    margin: 0px;
+    padding: 15px 0px 10px 0px;
+}
+
+section>div>:nth-child(2) {
+    background-color: rgb(40, 61, 82);
+    width: auto;
+    height: 60px;
+    margin-right: 5px;
+}
+
+section>div>article {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin: 5px 15px 0px 0px;
+    min-width: auto;
+    font-weight: 500;
+    font-size: 13px;
+    align-items: center;
+}
+
+section article>div>div {
+    display: flex;
+    flex-flow: row nowrap;
+    color: rgb(107, 119, 131);
+    justify-content: center;
+}
+
+article> :nth-child(1)>:hover {
+    color: #1da1f3;
+    padding: 0px;
+}
+
+article> :nth-child(1)>:hover+div {
+    color: #1da1f3;
+    padding: 0px;
+}
+
+article> :nth-child(2)>:hover {
+    background-color: #152c3e;
+    color: rgb(19, 105, 19);
+}
+
+article> :nth-child(2)>:hover+div {
+    background-color: #152c3e;
+    color: rgb(19, 105, 19);
+}
+
+article> :nth-child(3)>:hover {
+    background-color: #152c3e;
+    color: rgb(214, 30, 30);
+}
+
+article> :nth-child(3)>:hover+div {
+    background-color: #152c3e;
+    color: rgb(214, 30, 30);
+}
+
+article> :nth-child(4)>:hover {
+    background-color: #152c3e;
+    color: #1da1f3;
+}
+
+article> :nth-child(4)>:hover+div {
+    background-color: #152c3e;
+    color: #1da1f3;
+}
+
+#biggerp {
+    background-color: rgb(40, 61, 82);
+    width: auto;
+    min-height: 100px;
+    margin-right: 5px;
+}
+
+main> :last-child {
+    border-bottom: 1px rgb(40, 61, 82) solid;
+}

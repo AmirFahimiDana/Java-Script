@@ -1,0 +1,156 @@
+
+main {
+    flex-flow: column nowrap;
+    display: flex;
+    margin: 10px 20px 20px 20px;
+    margin-right: 10px;
+    width: 80%;
+
+    &#biggerp {
+        background-color: $section-color;
+        width: auto;
+        min-height: 100px;
+        margin-right: 5px;
+    }
+
+    > div {
+        display: flex;
+        flex-flow: row nowrap;
+        margin: 0px 20px 20px 20px;
+        justify-content: space-between;
+        font: bold;
+    }
+
+    > div > :last-child > i {
+        border-radius: 25px;
+        width: 15px;
+        height: 15px;
+        padding: 0px;
+    }
+
+    > div > :last-child > :hover {
+        background-color: #152c3e;
+        color: $sidebar-menu-color;
+        cursor: pointer;
+    }
+
+    > :last-child {
+        border-bottom: 1px $section-color solid;
+    }
+}
+
+section {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    border: 1px $section-color solid;
+    border-bottom: 0px;
+    padding: 5px 15px 5px 15px;
+
+    > img {
+        border-radius: 50%;
+        padding: 0px;
+    }
+
+    > div {
+        display: flex;
+        flex-flow: column nowrap;
+        flex-grow: 1;
+        display: inline-block;
+        margin: 0px;
+    }
+
+    > :first-child {
+        padding: 0px;
+        margin: 10px 10px 0px 0px;
+    }
+
+    > div > div {
+        display: flex;
+        flex-flow: row nowrap;
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+    > div > :nth-child(2) {
+        background-color: $section-color;
+        width: auto;
+        height: 60px;
+        margin-right: 5px;
+    }
+
+    > div > article {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        margin: 5px 15px 0px 0px;
+        min-width: auto;
+        font-weight: 500;
+        font-size: 13px;
+        align-items: center;
+    }
+
+    article > div > div {
+        display: flex;
+        flex-flow: row nowrap;
+        color: rgb(107, 119, 131);
+        justify-content: center;
+    }
+}
+
+article {
+    > :nth-child(1) > :hover {
+        color: $sidebar-menu-color;
+        padding: 0px;
+        cursor: pointer;
+    }
+
+    > :nth-child(1) > :hover + div {
+        color: $sidebar-menu-color;
+        padding: 0px;
+        cursor: pointer;
+    }
+
+    > :nth-child(2) > :hover {
+        background-color: $icon-background;
+        color: $icon-hover-color1;
+        cursor: pointer;
+    }
+
+    > :nth-child(2) > :hover + div {
+        background-color: $icon-background;
+        color: $icon-hover-color1;
+        cursor: pointer;
+    }
+
+    > :nth-child(3) > :hover + div {
+        background-color: $icon-background;
+        color: $icon-hover-color2;
+        cursor: pointer;
+    }
+
+    > :nth-child(3) > :hover {
+        background-color:$icon-background;
+        color: $icon-hover-color2;
+        cursor: pointer;
+    }
+
+    > :nth-child(4) > :hover {
+        background-color: $icon-background;
+        color: $sidebar-menu-color;
+        cursor: pointer;
+    }
+
+    > :nth-child(4) > :hover + div {
+        background-color: $icon-background;
+        color: $sidebar-menu-color;
+        cursor: pointer;
+    }
+}
+
+p {
+    letter-spacing: 1px;
+    display: inline-block;
+    margin: 0px;
+    padding: 15px 0px 10px 0px;
+}
