@@ -1,0 +1,113 @@
+header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    background-color: $content-background-color;
+
+    .header-banner__right{
+        width: 80%;
+        height: inherit;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        background-color: inherit;
+    }
+
+    .logo{
+        width: 10%;
+        height: 30px;
+        margin-right: 15px;
+    }
+
+    .search-box{
+        margin-right: 35px;
+        width: 100%;
+        height: 60%;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        position: relative;
+    }
+
+    .search-box_input{
+        width: 60%;
+        height: 100%;
+        border-radius: 5px;
+        border: none;
+        background-color:  rgb(240, 240, 241);
+        outline: none;
+        font-family: $font;
+        font-size: $font-size;
+        padding-right: 35px;
+    }
+    
+    .search-box__icon
+    {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        z-index: 999;
+        margin-right: 15px;
+        height: 100%;
+        margin-top: 20px;
+        color: rgb(172, 174, 179);
+        
+    }
+    
+    .fa-fa-search::before{
+        content: "\f149";
+        
+    }
+    
+    .search-box_input::placeholder{
+        color: rgb(172, 174, 179)  ;
+    }
+    
+    
+    
+    .header-banner__left{
+        width: 24%;
+        height: 60%;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        position: relative;
+        justify-content: flex-end;
+        margin-left: 31px;
+    }
+    
+    .login-btn{
+        width:140px;
+        height: 100%;
+        border-radius: 5px;
+        border: 1px solid #e0e0e2;
+        color: #616161;
+        font-family:  $font;
+        font-size: $font-size;
+        padding-right: 24px;
+        background-color: $content-background-color;
+        
+    }
+    
+    .login-icon{
+        width: 20px;
+        position: absolute;
+        z-index: 999;
+        height: 100%;
+        color: black;
+        position: absolute;
+        margin-left: 157px;
+        margin-top: 20px;
+    }
+    
+    .fa-fa-user::before{
+        content: "\f007";    
+    }
+    
+    .banner-left__divier{
+        height: 62%;
+        margin: 0px 11px 0px 13px;
+    }
+}

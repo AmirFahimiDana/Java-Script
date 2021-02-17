@@ -1,0 +1,21 @@
+@import "variables";
+
+* {
+    box-sizing: border-box;
+    direction: rtl;
+}
+
+body {
+    background-color: rgb(242, 242, 242);
+    margin: 0px;
+}
+
+.main-container{
+    width: 100%;
+}
+
+@import "header";
+@import "header-navigation";
+@import "product-category";
+@import "product";
+
