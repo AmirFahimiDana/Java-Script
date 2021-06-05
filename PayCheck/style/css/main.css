@@ -1,0 +1,169 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  direction: rtl;
+  box-sizing: border-box; }
+
+body {
+  background-color: white;
+  font-family: "B Nazanin", Tahoma, Geneva, sans-serif;
+  padding: 15vh 4.5vh 15vh 4.5vh; }
+  body .filter-section {
+    width: 250px;
+    justify-content: space-between;
+    margin-top: 0px;
+    padding: 10px 5px 25px 5px;
+    display: flex;
+    flex-flow: row nowrap; }
+  body h1 {
+    font-weight: bold;
+    margin-bottom: 2vh; }
+  body .main-section {
+    border: black 0.2rem solid;
+    display: flex;
+    flex-flow: column nowrap;
+    max-width: 150vh;
+    max-height: 150vh;
+    height: 150vh;
+    line-height: 1.6;
+    min-width: 646px; }
+    body .main-section .header-section {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      padding-right: 1rem; }
+      body .main-section .header-section .header-section_left,
+      body .main-section .header-section .header-section_right {
+        list-style: none; }
+        body .main-section .header-section .header-section_left .header-fields,
+        body .main-section .header-section .header-section_right .header-fields {
+          font-weight: bold; }
+      body .main-section .header-section .header-section_left li {
+        padding-left: 4vh; }
+    body .main-section .finance-box {
+      display: flex;
+      flex-flow: row;
+      flex-grow: 1; }
+      body .main-section .finance-box .finance-box_ul {
+        width: auto;
+        display: flex;
+        flex-flow: column nowrap; }
+        body .main-section .finance-box .finance-box_ul .finance-box_li {
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: space-between;
+          padding: 0 5px 0 5px; }
+      body .main-section .finance-box .income, body .main-section .finance-box .deductions, body .main-section .finance-box .considerations {
+        display: flex;
+        flex-flow: column nowrap;
+        width: auto;
+        border-left: solid 0.2rem black;
+        border-top: solid 0.2rem black; }
+        body .main-section .finance-box .income .header-span, body .main-section .finance-box .deductions .header-span, body .main-section .finance-box .considerations .header-span {
+          text-align: center;
+          font-size: 1rem;
+          font-weight: bold;
+          border-bottom: solid 0.2rem black;
+          border-top: solid 0.2rem black; }
+      body .main-section .finance-box .income > section, body .main-section .finance-box .deductions > section, body .main-section .finance-box .considerations > section {
+        padding: 0px 0px 0px 0px;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        padding: 0px 10px 0px 10px; }
+        body .main-section .finance-box .income > section li, body .main-section .finance-box .deductions > section li, body .main-section .finance-box .considerations > section li {
+          list-style: none;
+          font-weight: bold; }
+      body .main-section .finance-box .deductions {
+        width: 45vh; }
+      body .main-section .finance-box .deductions > section {
+        padding: 0px 0px 0px 0px;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        padding: 0px 10px 0px 10px; }
+        body .main-section .finance-box .deductions > section li {
+          list-style: none;
+          font-weight: bold; }
+      body .main-section .finance-box .considerations {
+        border-left: none;
+        width: 45vh; }
+      body .main-section .finance-box .considerations > section {
+        padding: 0px 0px 0px 0px;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        padding: 0px 10px 0px 10px; }
+        body .main-section .finance-box .considerations > section li {
+          list-style: none;
+          font-weight: bold; }
+    body .main-section .sum {
+      border-top: black solid 0.2rem;
+      display: flex;
+      flex-flow: row nowrap;
+      height: 5vh;
+      max-width: 150vh; }
+      body .main-section .sum .sum-of-sallary, body .main-section .sum .sum-of-fractions, body .main-section .sum .net-payable {
+        border-left: black solid 0.2rem;
+        justify-content: space-between;
+        display: flex;
+        flex-flow: row nowrap;
+        width: 60vh;
+        padding: 0 1vh 0 1vh;
+        font-weight: bold; }
+      body .main-section .sum .sum-of-fractions {
+        width: 45vh; }
+      body .main-section .sum .net-payable {
+        width: 45vh;
+        border-left: none; }
+    body .main-section .payable {
+      border-top: black solid 0.2rem;
+      padding-right: 1vh;
+      height: 6vh; }
+      body .main-section .payable #payable-value {
+        font-weight: bold; }
