@@ -132,8 +132,8 @@ function find_person_info() {
 
     console.log(Num2persian(2345678));
 
-    let main_section = document.querySelector('.main-section');
-    let main_section_width = main_section.clientWidth;
+    //let main_section = document.querySelector('.main-section');
+    //let main_section_width = main_section.clientWidth;
     let group_array = [];
     let uniqe_groups;
 
@@ -155,6 +155,7 @@ function find_person_info() {
 
     //let ul_width = Math.round(main_section_width / uniqe_groups.length);
     let ul_width = Math.round(150 / uniqe_groups.length);
+    const total = { total_income: 0, total_deduction: 0 };
 
     for (group_item of uniqe_groups) {
 
@@ -162,6 +163,10 @@ function find_person_info() {
         const ul_item = createElement('ul', '', 'finance-box_ul');
 
         const new_section = createElement('section', '', 'income', ul_width);
+        if (uniqe_groups[uniqe_groups.length - 1] === group_item) {
+            new_section.style.borderLeft = 'none';
+        }
+
         finance_section.appendChild(new_section);
         new_section.appendChild(span_item);
         new_section.appendChild(ul_item);
@@ -169,11 +174,18 @@ function find_person_info() {
 
         for (pers of personel_objects.salary_details
             .sort((a, b) => (a.display_order > b.display_order ? 1 : -1))) {
+
             if (pers.display_group === group_item) {
+
+                if (pers.display_group === 'درآمد') {
+                    total.total_income += parseInt(pers.amount);
+                }
+                
+                console.log(total.total_income);
 
                 const li_item = createElement('li', pers.title, 'finance-box_li');
                 ul_item.appendChild(li_item);
-
+                
                 for (p in pers) {
                     if (p === 'display_order' || p === 'display_group' || p === 'title') {
                         continue;
@@ -182,10 +194,15 @@ function find_person_info() {
                     const sp = createElement('span', pers[p]);
                     li_item.appendChild(sp);
                 }
-
+                
             }
         }
+
     }
-
-
+    const sum_of_sallary = document.querySelector('.sum-of-sallary');
+    const sum_of_sallary_span = createElement('span', total.total_income);
+    sum_of_sallary.appendChild(sum_of_sallary_span);
+    
+    
+    
 }
