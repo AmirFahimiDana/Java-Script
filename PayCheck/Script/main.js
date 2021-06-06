@@ -1,3 +1,4 @@
+
 const personArray = [
     {
         personelCode: "881416",
@@ -20,7 +21,7 @@ const personArray = [
                 title: "اولاد",
                 count: "2",
                 amount: "789",
-               display_order: 3,
+                display_order: 3,
                 display_group: "درآمد",
             },
             {
@@ -97,10 +98,8 @@ let p = null;
 let uniqe_groups = [];
 const finance_section = document.getElementById("finance-box");
 const find_button = document.getElementById("btnFilter");
-//   const display_group_actual = document.querySelectorAll(
-//     ".finance-box section span"
-//   );
 const entered_person_id = document.getElementById("user-Id-Input");
+entered_person_id.focus();
 
 function clear_doms() {
     overplus_doms = document.querySelectorAll(".finance-box section");
@@ -111,10 +110,11 @@ function clear_doms() {
     }
 }
 
-function createElement(tag, text, className) {
+function createElement(tag, text, className, width) {
     let element = document.createElement(tag);
     element.textContent = text;
     element.className = className;
+    element.style.width = `${width}vh`;
     return element;
 }
 
@@ -129,9 +129,13 @@ find_button.addEventListener("click", find_person_info);
 
 function find_person_info() {
     clear_doms();
+
+    console.log(Num2persian(2345678));
+
+    let main_section = document.querySelector('.main-section');
+    let main_section_width = main_section.clientWidth;
     let group_array = [];
     let uniqe_groups;
-    let income_items = [];
 
     for (p of personArray) {
         if (p.personelCode === entered_person_id.value) {
@@ -147,24 +151,21 @@ function find_person_info() {
     const personel_objects = personArray.find(
         ({ personelCode }) => personelCode === entered_person_id.value);
 
-
     console.log(personel_objects);
 
-    console.log(group_array);
-
-    let incomes = [];
+    //let ul_width = Math.round(main_section_width / uniqe_groups.length);
+    let ul_width = Math.round(150 / uniqe_groups.length);
 
     for (group_item of uniqe_groups) {
 
         const span_item = createElement('span', group_item, 'header-span');
         const ul_item = createElement('ul', '', 'finance-box_ul');
-        const new_section = document.createElement("section");
 
+        const new_section = createElement('section', '', 'income', ul_width);
         finance_section.appendChild(new_section);
-        new_section.className = 'income';
-
         new_section.appendChild(span_item);
         new_section.appendChild(ul_item);
+
 
         for (pers of personel_objects.salary_details
             .sort((a, b) => (a.display_order > b.display_order ? 1 : -1))) {
@@ -173,7 +174,6 @@ function find_person_info() {
                 const li_item = createElement('li', pers.title, 'finance-box_li');
                 ul_item.appendChild(li_item);
 
-                console.log(pers);
                 for (p in pers) {
                     if (p === 'display_order' || p === 'display_group' || p === 'title') {
                         continue;
