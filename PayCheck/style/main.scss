@@ -88,7 +88,6 @@ body {
       .income {
         display: flex;
         flex-flow: column nowrap;
-        width: auto;
         border-left: solid 0.2rem black;
         border-top: solid 0.2rem black;
 
@@ -97,28 +96,28 @@ body {
           font-size: 1rem;
           font-weight: bold;
           border-bottom: solid 0.2rem black;
-          border-top: solid 0.2rem black;
+          //border-top: solid 0.2rem black;
         }
       }
 
       .income > section {
         @include section_flex;
       }
-      .deductions {
-        @extend.income;
-        width: 45vh;
-      }
-      .deductions > section {
-        @include section_flex;
-      }
-      .considerations {
-        @extend.income;
-        border-left: none;
-        width: 45vh;
-      }
-      .considerations > section {
-        @include section_flex;
-      }
+      // .deductions {
+      //   @extend.income;
+      //   width: 45vh;
+      // }
+      // .deductions > section {
+      //   @include section_flex;
+      // }
+      // .considerations {
+      //   @extend.income;
+      //   border-left: none;
+      //   width: 45vh;
+      // }
+      // .considerations > section {
+      //   @include section_flex;
+      // }
     }
 
     .sum {
