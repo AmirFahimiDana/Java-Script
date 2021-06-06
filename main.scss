@@ -1,0 +1,161 @@
+@import "_reset.scss";
+
+* {
+  direction: rtl;
+  box-sizing: border-box;
+}
+
+@mixin section_flex() {
+  padding: 0px 0px 0px 0px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: 0px 10px 0px 10px;
+  li {
+    list-style: none;
+    font-weight: bold;
+  }
+}
+
+body {
+  background-color: white;
+  font-family: "B Nazanin", Tahoma, Geneva, sans-serif;
+  padding: 15vh 4.5vh 15vh 4.5vh;
+
+  //background-image: url("Logo.jpg");
+  //background-repeat: round;
+
+  .filter-section {
+    width: 250px;
+    justify-content: space-between;
+    margin-top: 0px;
+    padding: 10px 5px 25px 5px;
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  h1 {
+    font-weight: bold;
+    margin-bottom: 2vh;
+    //display: none;
+  }
+  .main-section {
+    //visibility: hidden;
+    border: black 0.2rem solid;
+    display: flex;
+    flex-flow: column nowrap;
+    max-width: 150vh;
+    max-height: 150vh;
+    height: 150vh;
+    line-height: 1.6;
+    min-width: 646px;
+    .header-section {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      padding-right: 1rem;
+      .header-section_left,
+      .header-section_right {
+        list-style: none;
+        .header-fields {
+          font-weight: bold;
+        }
+      }
+
+      .header-section_left li {
+        padding-left: 4vh;
+      }
+    }
+
+    .finance-box {
+      display: flex;
+      flex-flow: row;
+      flex-grow: 1;
+
+      .finance-box_ul {
+        width: auto;
+        display: flex;
+        flex-flow: column nowrap;
+
+        .finance-box_li {
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: space-between;
+          padding: 0 5px 0 5px;
+        }
+      }
+
+      .income {
+        display: flex;
+        flex-flow: column nowrap;
+        border-left: solid 0.2rem black;
+        border-top: solid 0.2rem black;
+
+        .header-span {
+          text-align: center;
+          font-size: 1rem;
+          font-weight: bold;
+          border-bottom: solid 0.2rem black;
+          //border-top: solid 0.2rem black;
+        }
+      }
+
+      .income > section {
+        @include section_flex;
+      }
+      // .deductions {
+      //   @extend.income;
+      //   width: 45vh;
+      // }
+      // .deductions > section {
+      //   @include section_flex;
+      // }
+      // .considerations {
+      //   @extend.income;
+      //   border-left: none;
+      //   width: 45vh;
+      // }
+      // .considerations > section {
+      //   @include section_flex;
+      // }
+    }
+
+    .sum {
+      border-top: black solid 0.2rem;
+      display: flex;
+      flex-flow: row nowrap;
+      height: 5vh;
+      max-width: 150vh;
+
+      .sum-of-sallary {
+        border-left: black solid 0.2rem;
+        justify-content: space-between;
+        display: flex;
+        flex-flow: row nowrap;
+        width: 60vh;
+        padding: 0 1vh 0 1vh;
+        font-weight: bold;
+      }
+
+      .sum-of-fractions {
+        @extend.sum-of-sallary;
+        width: 45vh;
+      }
+
+      .net-payable {
+        @extend.sum-of-sallary;
+        width: 45vh;
+        border-left: none;
+      }
+    }
+
+    .payable {
+      border-top: black solid 0.2rem;
+      padding-right: 1vh;
+      height: 6vh;
+      #payable-value {
+        font-weight: bold;
+      }
+    }
+  }
+}
