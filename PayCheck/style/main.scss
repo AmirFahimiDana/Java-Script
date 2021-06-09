@@ -22,8 +22,7 @@ body {
   font-family: "B Nazanin", Tahoma, Geneva, sans-serif;
   padding: 15vh 4.5vh 15vh 4.5vh;
 
-  //background-image: url("Logo.jpg");
-  //background-repeat: round;
+  
 
   .filter-section {
     width: 250px;
@@ -39,6 +38,7 @@ body {
     margin-bottom: 2vh;
     //display: none;
   }
+ 
   .main-section {
     //visibility: hidden;
     border: black 0.2rem solid;
@@ -49,6 +49,21 @@ body {
     height: 150vh;
     line-height: 1.6;
     min-width: 646px;
+    position: relative;
+    &::before{
+      content: "";
+      background-image: url("https://cdn.mahan.aero/logo-default.svg");
+      background-size: 100px;
+      background-repeat: repeat;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom:0;
+      top: 0;
+      opacity: 0.2;
+    }
+    
+
     .header-section {
       display: flex;
       flex-flow: row nowrap;
@@ -90,18 +105,29 @@ body {
         flex-flow: column nowrap;
         border-left: solid 0.2rem black;
         border-top: solid 0.2rem black;
+        justify-content: space-between;
+        
+
 
         .header-span {
           text-align: center;
           font-size: 1rem;
           font-weight: bold;
           border-bottom: solid 0.2rem black;
-          //border-top: solid 0.2rem black;
+         
         }
+        
       }
 
-      .income > section {
+      .income section {
         @include section_flex;
+      }
+      .total_section{
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        
+
       }
       // .deductions {
       //   @extend.income;
@@ -132,19 +158,19 @@ body {
         justify-content: space-between;
         display: flex;
         flex-flow: row nowrap;
-        width: 60vh;
+        width: 50vh;
         padding: 0 1vh 0 1vh;
         font-weight: bold;
       }
 
       .sum-of-fractions {
         @extend.sum-of-sallary;
-        width: 45vh;
+        width: 50vh;
       }
 
       .net-payable {
         @extend.sum-of-sallary;
-        width: 45vh;
+        width: 50vh;
         border-left: none;
       }
     }
