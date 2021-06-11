@@ -52,7 +52,12 @@ table {
 body {
   background-color: white;
   font-family: "B Nazanin", Tahoma, Geneva, sans-serif;
-  padding: 15vh 4.5vh 15vh 4.5vh; }
+  padding: 20px;
+  line-height: 1.6; }
+  body .alert-span {
+    position: relative;
+    font-weight: bold;
+    font-size: 50px; }
   body .filter-section {
     width: 250px;
     justify-content: space-between;
@@ -62,29 +67,38 @@ body {
     flex-flow: row nowrap; }
   body h1 {
     font-weight: bold;
-    margin-bottom: 2vh; }
+    margin-bottom: 2vw; }
   body .main-section {
+    visibility: hidden;
     border: black 0.2rem solid;
     display: flex;
     flex-flow: column nowrap;
-    max-width: 150vh;
-    max-height: 150vh;
-    height: 150vh;
-    line-height: 1.6;
-    min-width: 646px; }
+    position: relative; }
+    body .main-section::before {
+      content: "";
+      background-image: url("https://cdn.mahan.aero/logo-default.svg");
+      background-size: 100px;
+      background-repeat: repeat;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      opacity: 0.2; }
     body .main-section .header-section {
       display: flex;
       flex-flow: row nowrap;
       justify-content: space-between;
-      padding-right: 1rem; }
-      body .main-section .header-section .header-section_left,
-      body .main-section .header-section .header-section_right {
-        list-style: none; }
-        body .main-section .header-section .header-section_left .header-fields,
-        body .main-section .header-section .header-section_right .header-fields {
-          font-weight: bold; }
-      body .main-section .header-section .header-section_left li {
-        padding-left: 4vh; }
+      padding-right: 1rem;
+      list-style: none;
+      padding: 10px; }
+      body .main-section .header-section .header-section-right {
+        display: flex;
+        flex-flow: column nowrap;
+        font-weight: bold; }
+      body .main-section .header-section .header-section-left {
+        display: flex;
+        flex-flow: column nowrap; }
     body .main-section .finance-box {
       display: flex;
       flex-flow: row;
@@ -98,72 +112,66 @@ body {
           flex-flow: row nowrap;
           justify-content: space-between;
           padding: 0 5px 0 5px; }
-      body .main-section .finance-box .income, body .main-section .finance-box .deductions, body .main-section .finance-box .considerations {
+      body .main-section .finance-box .income {
         display: flex;
         flex-flow: column nowrap;
-        width: auto;
         border-left: solid 0.2rem black;
-        border-top: solid 0.2rem black; }
-        body .main-section .finance-box .income .header-span, body .main-section .finance-box .deductions .header-span, body .main-section .finance-box .considerations .header-span {
+        border-top: solid 0.2rem black;
+        justify-content: space-between; }
+        body .main-section .finance-box .income .header-span {
           text-align: center;
           font-size: 1rem;
           font-weight: bold;
-          border-bottom: solid 0.2rem black;
-          border-top: solid 0.2rem black; }
-      body .main-section .finance-box .income > section, body .main-section .finance-box .deductions > section, body .main-section .finance-box .considerations > section {
+          border-bottom: solid 0.2rem black; }
+      body .main-section .finance-box .income section {
         padding: 0px 0px 0px 0px;
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
         padding: 0px 10px 0px 10px; }
-        body .main-section .finance-box .income > section li, body .main-section .finance-box .deductions > section li, body .main-section .finance-box .considerations > section li {
+        body .main-section .finance-box .income section li {
           list-style: none;
           font-weight: bold; }
-      body .main-section .finance-box .deductions {
-        width: 45vh; }
-      body .main-section .finance-box .deductions > section {
-        padding: 0px 0px 0px 0px;
+      body .main-section .finance-box .total_section {
         display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
-        padding: 0px 10px 0px 10px; }
-        body .main-section .finance-box .deductions > section li {
-          list-style: none;
-          font-weight: bold; }
-      body .main-section .finance-box .considerations {
-        border-left: none;
-        width: 45vh; }
-      body .main-section .finance-box .considerations > section {
-        padding: 0px 0px 0px 0px;
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
-        padding: 0px 10px 0px 10px; }
-        body .main-section .finance-box .considerations > section li {
-          list-style: none;
-          font-weight: bold; }
+        flex-flow: row;
+        justify-content: space-between; }
     body .main-section .sum {
       border-top: black solid 0.2rem;
       display: flex;
       flex-flow: row nowrap;
       height: 5vh;
-      max-width: 150vh; }
+      max-width: 150vw; }
       body .main-section .sum .sum-of-sallary, body .main-section .sum .sum-of-fractions, body .main-section .sum .net-payable {
         border-left: black solid 0.2rem;
         justify-content: space-between;
         display: flex;
         flex-flow: row nowrap;
-        width: 60vh;
-        padding: 0 1vh 0 1vh;
+        width: 50vw;
+        padding: 0 5px 0 5px;
         font-weight: bold; }
       body .main-section .sum .sum-of-fractions {
-        width: 45vh; }
+        width: 50vw; }
       body .main-section .sum .net-payable {
-        width: 45vh;
+        width: 50vw;
         border-left: none; }
     body .main-section .payable {
       border-top: black solid 0.2rem;
-      padding-right: 1vh;
+      padding-right: 5px;
       height: 6vh; }
       body .main-section .payable #payable-value {
         font-weight: bold; }
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .finance-box {
+    flex-flow: row nowrap; }
+  .header-section {
+    flex-flow: row nowrap; } }
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .finance-box {
+    flex-flow: row nowrap; }
+  .header-section {
+    flex-flow: row nowrap; } }
