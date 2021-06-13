@@ -272,7 +272,7 @@ function createElement(tag, text, className, width) {
     let element = document.createElement(tag);
     element.textContent = text;
     element.className = className;
-    element.style.width = `${width}vw`;
+    element.style.width = `${width}px`;
     return element;
 }
 
@@ -309,8 +309,10 @@ function find_person_info() {
         return;
     }
 
+    let main_section_width = main_section.offsetWidth;
+    console.log(main_section_width);
+    let ul_width = Math.round(main_section_width / finance_group.length);
     
-    let ul_width = Math.round(window.innerWidth / finance_group.length);
 
     let total_income = 0;
     let total_deduction = 0;
@@ -342,7 +344,7 @@ function find_person_info() {
         const span_item = createElement('span', group_item.title, 'header-span');
         const ul_item = createElement('ul', '', 'finance-box_ul');
 
-        const new_section = createElement('section', '', 'income', ul_width);
+        const new_section = createElement('section', '', 'income');
         
         if (finance_group[finance_group.length - 1] === group_item) {
             new_section.style.borderLeft = 'none';
