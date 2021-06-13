@@ -1,0 +1,185 @@
+@import "_reset.scss";
+
+* {
+  direction: rtl;
+  box-sizing: border-box;
+}
+
+@mixin section_flex() {
+  padding: 0px 0px 0px 0px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: 0px 10px 0px 10px;
+  li {
+    list-style: none;
+    font-weight: bold;
+  }
+}
+
+body {
+  font-family: "B Nazanin", Tahoma, Geneva, sans-serif;
+  padding: 20px;
+  //max-width: 150vw;
+  line-height: 1.6;
+  //min-width: 646px;
+}
+
+.alert-span {
+  position: relative;
+  font-weight: bold;
+  font-size: 50px;
+}
+
+.filter-section {
+  width: 250px;
+  justify-content: space-between;
+  margin-top: 0px;
+  padding: 10px 5px 25px 5px;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+h1 {
+  font-weight: bold;
+  margin-bottom: 2vw;
+}
+
+.main-section {
+  visibility: hidden;
+  border: black 0.2rem solid;
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  //max-height: 150vh;
+  //height: 150vh;
+  position: relative;
+
+  &::before {
+    content: "";
+    background-image: url("https://cdn.mahan.aero/logo-default.svg");
+    background-size: 100px;
+    background-repeat: repeat;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    opacity: 0.2;
+  }
+}
+
+.header-section {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  padding-right: 1rem;
+  list-style: none;
+  padding: 10px;
+  text-align: center;
+  .header-section-right {
+    display: flex;
+    flex-flow: column nowrap;
+    font-weight: bold;
+  }
+
+  .header-section-left {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+}
+
+.finance-box {
+  display: flex;
+  flex-flow: column;
+  flex-grow: 1;
+  width: 100%;
+
+  .finance-box_ul {
+    width: auto;
+    display: flex;
+    flex-flow: column nowrap;
+
+    .finance-box_li {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      padding: 0 5px 0 5px;
+    }
+  }
+
+  .income {
+    display: flex;
+    flex-flow: column nowrap;
+    border-top: solid 0.2rem black;
+    justify-content: space-between;
+    width: 100%;
+
+    .header-span {
+      text-align: center;
+      font-size: 1rem;
+      font-weight: bold;
+      border-bottom: solid 0.2rem black;
+    }
+  }
+
+  .income section {
+    @include section_flex;
+  }
+  .total_section {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+  }
+}
+
+.sum {
+  border-top: black solid 0.2rem;
+  display: flex;
+  flex-flow: row nowrap;
+  height: 5vh;
+  max-width: 150vw;
+
+  .sum-of-sallary {
+    border-left: black solid 0.2rem;
+    justify-content: space-between;
+    display: flex;
+    flex-flow: row nowrap;
+    width: 50vw;
+    padding: 0 5px 0 5px;
+    font-weight: bold;
+  }
+
+  .sum-of-fractions {
+    @extend.sum-of-sallary;
+    width: 50vw;
+  }
+
+  .net-payable {
+    @extend.sum-of-sallary;
+    width: 50vw;
+    border-left: none;
+  }
+}
+
+.payable {
+  border-top: black solid 0.2rem;
+  padding-right: 5px;
+  height: 6vh;
+  #payable-value {
+    font-weight: bold;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* For tablets: */
+  .finance-box {
+    flex-direction: row;
+  }
+
+  .header-section {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  .finance-box .income {border-left: solid 0.2rem black;}
+}

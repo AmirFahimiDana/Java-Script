@@ -1,0 +1,19 @@
+{
+  "name": "paycheck",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "node-sass style/main.scss --output style/css",
+    "build:watch": "npm run build && node-sass style/main.scss -wo style/css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node": "^16.1.0"
+  },
+  "dependencies": {
+    "node-sass": "^6.0.0"
+  }
+}

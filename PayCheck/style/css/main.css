@@ -1,0 +1,183 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  direction: rtl;
+  box-sizing: border-box; }
+
+body {
+  font-family: "B Nazanin", Tahoma, Geneva, sans-serif;
+  padding: 20px;
+  line-height: 1.6; }
+
+.alert-span {
+  position: relative;
+  font-weight: bold;
+  font-size: 50px; }
+
+.filter-section {
+  width: 250px;
+  justify-content: space-between;
+  margin-top: 0px;
+  padding: 10px 5px 25px 5px;
+  display: flex;
+  flex-flow: row nowrap; }
+
+h1 {
+  font-weight: bold;
+  margin-bottom: 2vw; }
+
+.main-section {
+  visibility: hidden;
+  border: black 0.2rem solid;
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  position: relative; }
+  .main-section::before {
+    content: "";
+    background-image: url("https://cdn.mahan.aero/logo-default.svg");
+    background-size: 100px;
+    background-repeat: repeat;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    opacity: 0.2; }
+
+.header-section {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  padding-right: 1rem;
+  list-style: none;
+  padding: 10px;
+  text-align: center; }
+  .header-section .header-section-right {
+    display: flex;
+    flex-flow: column nowrap;
+    font-weight: bold; }
+  .header-section .header-section-left {
+    display: flex;
+    flex-flow: column nowrap; }
+
+.finance-box {
+  display: flex;
+  flex-flow: column;
+  flex-grow: 1;
+  width: 100%; }
+  .finance-box .finance-box_ul {
+    width: auto;
+    display: flex;
+    flex-flow: column nowrap; }
+    .finance-box .finance-box_ul .finance-box_li {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      padding: 0 5px 0 5px; }
+  .finance-box .income {
+    display: flex;
+    flex-flow: column nowrap;
+    border-top: solid 0.2rem black;
+    justify-content: space-between;
+    width: 100%; }
+    .finance-box .income .header-span {
+      text-align: center;
+      font-size: 1rem;
+      font-weight: bold;
+      border-bottom: solid 0.2rem black; }
+  .finance-box .income section {
+    padding: 0px 0px 0px 0px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 0px 10px 0px 10px; }
+    .finance-box .income section li {
+      list-style: none;
+      font-weight: bold; }
+  .finance-box .total_section {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between; }
+
+.sum {
+  border-top: black solid 0.2rem;
+  display: flex;
+  flex-flow: row nowrap;
+  height: 5vh;
+  max-width: 150vw; }
+  .sum .sum-of-sallary, .sum .sum-of-fractions, .sum .net-payable {
+    border-left: black solid 0.2rem;
+    justify-content: space-between;
+    display: flex;
+    flex-flow: row nowrap;
+    width: 50vw;
+    padding: 0 5px 0 5px;
+    font-weight: bold; }
+  .sum .sum-of-fractions {
+    width: 50vw; }
+  .sum .net-payable {
+    width: 50vw;
+    border-left: none; }
+
+.payable {
+  border-top: black solid 0.2rem;
+  padding-right: 5px;
+  height: 6vh; }
+  .payable #payable-value {
+    font-weight: bold; }
+
+@media only screen and (min-width: 768px) {
+  /* For tablets: */
+  .finance-box {
+    flex-direction: row; }
+  .header-section {
+    display: flex;
+    flex-flow: row nowrap; }
+  .finance-box .income {
+    border-left: solid 0.2rem black; } }
